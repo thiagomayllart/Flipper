@@ -1,0 +1,32 @@
+---Class User interface:
+
+Receives input from user:
+
+1) Request with the burp suite format (XML), string should be between @@@ character. -f (file)
+2) size of the blocks. -bs (size, X-if dont know size) (can be 8 or 16)
+3) which block should be exploited. -bp (position, X-if dont know which)
+4) the payload and position (may have more than one): -pay 2-true;,false/6-false,true;/11-2,3 or X-1,0 or X-0,1 or X-parameteryouknow, parameteryouwannause (for testing every position in the block)
+
+call example:
+
+flipper.py -f (file location) -bs 16 -bp 1 -pay 2-true
+flipper.py -f (file location) -bs 8 -bp 3 -pay 2-false
+flipper.py -f (file location) -bs X -bp X -pay X-true
+
+---ClassRequest:
+
+A function processes the XML format saved in the user interface and stablish 
+each variable to create a HTTP request.
+
+A function does the http request and prompts the altered key, the
+reply (200, 301, 404, etc), and the bytesize, and simultaneously appends
+the request and reply to a .txt.
+
+At the end, save file and close it.
+
+---Exploiter
+
+Main function is to generate a new token/key and call a function
+in class request to do the call (receive the new key as the parameter).
+
+
