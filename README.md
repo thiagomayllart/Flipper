@@ -39,9 +39,9 @@ This tool is integrated with the output produced using Burp Suite. You **MUST US
  
  -pay | The payload you want to insert. You must select the starting position and then(separated by '-') the parameter you know it is in that position and then (separated by ',') the parameter you want to have in the end:
  
- 2-false,true;
- 
- If you want to test every position in that block, simply type X.
+   2-false,true;
+
+   If you want to test every position in that block, simply type X.
  
  -th | quantity of threads used
  
@@ -49,7 +49,7 @@ This tool is integrated with the output produced using Burp Suite. You **MUST US
  
  Example:
  
-flipper.py -f (file location) -bs 16 -bp 1 -pay 2-false,true;
-flipper.py -f (file location) -bs 8 -bp 3 -pay 2-false,true;
-flipper.py -f (file location) -bs 8 -bp X -pay X-0,1
+    flipper.py -f (file location) -bs 16 -bp 1 -pay 2-false,true;
+    flipper.py -f (file location) -bs 8 -bp 3 -pay 2-false,true;
+    flipper.py -f (file location) -bs 8 -bp X -pay X-0,1
 
