@@ -35,7 +35,7 @@ This tool is integrated with the output produced using Burp Suite. You **MUST US
  
  -bs | The size of each block in your input (may be 8 or 16 depending on the type of AES encryption used)
  
- -bp | The position of inside the block of size 8 or 16 that the substring you want to change starts. If you want to test every block, simply type X.
+ -bp | The block of size 8 or 16 that you want to insert the payload. If you want to test every block, simply type X.
  
  -pay | The payload you want to insert. You must select the starting position and then(separated by '-') the parameter you know it is in that position and then (separated by ',') the parameter you want to have in the end:
  
